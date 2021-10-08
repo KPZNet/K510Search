@@ -1,0 +1,22 @@
+{
+	"stop" : [
+		{
+			"departuretime" : "2000-01-31 06:00",
+			"arrivaltime" : "2000-01-31 06:15",
+			"name" : "Maple",
+			"destination" : "Pitt"
+		},
+		{
+			"departuretime" : "2000-01-31 13:00",
+			"arrivaltime" : "2000-01-31 13:15",
+			"name" : "Maple",
+			"destination" : "Oak"
+		},
+		{
+			"departuretime" : "2000-01-31 11:00",
+			"arrivaltime" : "2000-01-31 12:15",
+			"name" : "Maple",
+			"destination" : "Conc"
+		}
+	]
+}
