@@ -56,7 +56,7 @@ class HelloProblem(SearchProblem):
     def result(self, state, action):
         bs = next(x for x in self.bs if x.name == state)
         res = []
-        return action.destination
+        return state + "," + action.destination
 
 
     def is_goal(self, state):
@@ -64,9 +64,22 @@ class HelloProblem(SearchProblem):
         return state == GOAL
 
     def heuristic(self, state):
+        distance = 0
+        stps = list( state.split(","))
+        l = len(stps)
+        if l == 1:
+            bs = next(x for x in self.bs if x.name == stps[0])
+            distance = bs.distance
+        if l == 2:
+            source = stps[0]
+            dest = stps[1]
+            sourcenode = next(x for x in self.bs if x.name == source)
+            destnode = next(x for x in self.bs if x.name == dest)
+            source_to_dest = next(x for x in sourcenode.trips if x.destination == dest)
+            distance = source_to_dest.distance + destnode.distance
 
-        bs = next(x for x in self.bs if x.name == state)
-        distance = bs.distance
+
+
         return distance
 
 
