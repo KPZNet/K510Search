@@ -53,19 +53,27 @@ class BusRoute( SearchProblem ):
         trips = []
         for t in bst.trips:
            trips.append(t.destination)
+        print("------------------")
+        print("Actions: ", trips)
         return trips
 
     def result(self, state, action):
         rtn = action
+        print("Result: ", rtn)
         return rtn
 
     def is_goal(self, state):
-        return state == GOAL
+        g = state == GOAL
+        print("\tGOAL: ", g)
+        if g:
+            print("\n*** GOAL FOUND STOP ***")
+        return g
 
     def cost(self, state1, action, state2):
         sourcenode = self.get_node ( state1 )
         source_to_dest = next(x for x in sourcenode.trips if x.destination == state2)
         cost = source_to_dest.triptime
+        print("\tCOST: ", cost)
         return cost
 
     def get_node(self, node_name) :
@@ -79,21 +87,23 @@ class BusRoute( SearchProblem ):
     def heuristic(self, state):
         destnode = self.get_node ( state )
         distance = destnode.linedistance
-
+        print("\tHEURISTIC: ", distance)
         return distance
 
 bspts = init_bus_schedule()
 
 problem = BusRoute( busstops=bspts )
-#result = astar(problem)
-result = astar(problem, viewer=WebViewer())
+result = astar(problem)
+#result = astar(problem, viewer=WebViewer())
 
-
-#print(result.state)
 route = []
 g = result.path()
+#print("RESULT PATH: ", g)
 for s in result.path():
     state = s[1]
-    n = problem.print_node(state)
-    route.append(state)
+    n = problem.get_node(state)
+    str = n.name + " --> "
+    route.append(str)
+route.append(" END")
+print("Bus Route Recommended:")
 print(route)
