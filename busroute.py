@@ -51,11 +51,11 @@ def get_destination(state) :
         stp = stps[1]
     return stp
 
-class HelloProblem(SearchProblem):
+class BusRoute( SearchProblem ):
 
     def __init__(self, busstops):
         self.bs = busstops
-        super(HelloProblem, self).__init__(initial_state='brentwood')
+        super( BusRoute, self ).__init__( initial_state='brentwood' )
 
     def actions(self, state):
         stp = get_destination ( state )
@@ -92,8 +92,9 @@ class HelloProblem(SearchProblem):
 
 bspts = init_bus_schedule()
 
-problem = HelloProblem(busstops=bspts)
+problem = BusRoute( busstops=bspts )
 result = astar(problem)
+
 
 print(result.state)
 route = []
