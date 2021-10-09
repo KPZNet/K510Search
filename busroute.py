@@ -84,7 +84,7 @@ class BusRoute( SearchProblem ):
             sourcenode = next(x for x in self.bs if x.name == source)
             destnode = next(x for x in self.bs if x.name == dest)
             source_to_dest = next(x for x in sourcenode.trips if x.destination == dest)
-            cost = source_to_dest.distance
+            cost = source_to_dest.triptime
         return cost
 
     def heuristic(self, state):
