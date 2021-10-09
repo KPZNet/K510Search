@@ -9,7 +9,6 @@ from bus_schedules import bus_sch
 
 GOAL = 'pitt'
 
-
 def extract_time(datetimestring):
     dti = datetime.strptime(datetimestring, '%Y-%m-%d %H:%M')
     return dti
