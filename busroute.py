@@ -41,27 +41,36 @@ class BusStop():
             s = BusTrip(stop)
             self.trips.append(s)
 
+def get_destination(state) :
+    stps = list ( state.split ( "," ) )
+    l = len ( stps )
+    if l == 1 :
+        stp = stps[0]
+    if l == 2 :
+        source = stps[0]
+        stp = stps[1]
+    return stp
 
 class HelloProblem(SearchProblem):
 
     def __init__(self, busstops):
         self.bs = busstops
-
         super(HelloProblem, self).__init__(initial_state='brentwood')
 
     def actions(self, state):
-        bs = next(x for x in self.bs if x.name == state)
+        stp = get_destination ( state )
+        bs = next(x for x in self.bs if x.name == stp)
         return bs.trips
 
     def result(self, state, action):
-        bs = next(x for x in self.bs if x.name == state)
-        res = []
-        return state + "," + action.destination
-
+        stp = get_destination ( state )
+        rtn = stp + "," + action.destination
+        return rtn
 
     def is_goal(self, state):
-        bs = next(x for x in self.bs if x.name == state)
-        return state == GOAL
+        stp = get_destination ( state )
+        return stp == GOAL
+
 
     def heuristic(self, state):
         distance = 0
@@ -78,11 +87,7 @@ class HelloProblem(SearchProblem):
             source_to_dest = next(x for x in sourcenode.trips if x.destination == dest)
             distance = source_to_dest.distance + destnode.distance
 
-
-
         return distance
-
-
 
 
 bspts = init_bus_schedule()
