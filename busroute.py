@@ -5,17 +5,18 @@ from simpleai.search import SearchProblem, astar
 from simpleai.search.viewers import WebViewer
 import json
 from datetime import datetime
+from bus_schedules import bus_sch
 
 GOAL = 'pitt'
+
 
 def extract_time(datetimestring):
     dti = datetime.strptime(datetimestring, '%Y-%m-%d %H:%M')
     return dti
 
 def read_schedule():
-    with open("bus_stops.json", "r") as rf:
-        decoded_data = json.load(rf)
-        return decoded_data
+    decoded_data = bus_sch
+    return decoded_data
 
 def init_bus_schedule():
     dc = read_schedule()
@@ -56,7 +57,7 @@ class BusRoute( SearchProblem ):
 
     def actions(self, state):
         stp = get_destination ( state )
-        bst = next(x for x in self.bs if x.name == stp)
+        bst = self.get_node ( stp )
         trips = []
         for t in bst.trips:
            trips.append(t.destination)
@@ -76,29 +77,37 @@ class BusRoute( SearchProblem ):
         stps = list( state2.split(","))
         l = len(stps)
         if l == 1:
-            bs = next(x for x in self.bs if x.name == stps[0])
+            bs = self.get_node ( stps[0] )
             cost = bs.linedistance
         if l > 1:
             source = stps[l-2]
             dest = stps[l-1]
-            sourcenode = next(x for x in self.bs if x.name == source)
-            destnode = next(x for x in self.bs if x.name == dest)
+            sourcenode = self.get_node ( source )
+            destnode = self.get_node ( dest )
             source_to_dest = next(x for x in sourcenode.trips if x.destination == dest)
             cost = source_to_dest.triptime
         return cost
+
+    def get_node(self, node_name) :
+        return next ( x for x in self.bs if x.name == node_name )
+
+    def print_node(self, node_name):
+        n = self.get_node(node_name)
+        s = n.name
+        print(s)
 
     def heuristic(self, state):
         distance = 0
         stps = list( state.split(","))
         l = len(stps)
         if l == 1:
-            bs = next(x for x in self.bs if x.name == stps[0])
+            bs = self.get_node ( stps[0] )
             distance = bs.linedistance
         if l > 1:
             source = stps[l-2]
             dest = stps[l-1]
-            sourcenode = next(x for x in self.bs if x.name == source)
-            destnode = next(x for x in self.bs if x.name == dest)
+            sourcenode = self.get_node ( source )
+            destnode = self.get_node ( dest )
             source_to_dest = next(x for x in sourcenode.trips if x.destination == dest)
             distance = destnode.linedistance
 
@@ -112,10 +121,11 @@ result = astar(problem)
 #result = astar(problem, viewer=WebViewer())
 
 
-print(result.state)
+#print(result.state)
 route = []
 g = result.path()
 for s in result.path():
     stp = get_destination ( s[1] )
+    n = problem.print_node(stp)
     route.append(stp)
-print(route)
+#print(route)
