@@ -112,7 +112,6 @@ class BusRoute( SearchProblem ):
 
         return distance
 
-
 bspts = init_bus_schedule()
 
 problem = BusRoute( busstops=bspts )
