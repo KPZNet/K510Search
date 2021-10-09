@@ -28,6 +28,12 @@ bus_sch = {
           "distance": 7
         },
         {
+          "departuretime" : "2000-01-31 06:03",
+          "arrivaltime" : "2000-01-31 06:28",
+          "destination" : "plsnt",
+          "distance" : 4
+        },
+        {
           "departuretime": "2000-01-31 06:05",
           "arrivaltime": "2000-01-31 06:16",
           "destination": "conc",
@@ -35,6 +41,18 @@ bus_sch = {
         }
       ],
       "linedistance": 25
+    },
+    {
+      "name" : "plsnt",
+      "stops" : [
+        {
+          "departuretime" : "2000-01-31 06:50",
+          "arrivaltime" : "2000-01-31 07:35",
+          "destination" : "conc",
+          "distance" : 3
+        }
+      ],
+      "linedistance" : 12
     },
     {
       "name": "oak",
