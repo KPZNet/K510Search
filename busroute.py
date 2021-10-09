@@ -63,8 +63,8 @@ class BusRoute( SearchProblem ):
         return trips
 
     def result(self, state, action):
-        #stp = get_destination ( state )
-        rtn = state + "," + action
+        stp = get_destination ( state )
+        rtn = stp + "," + action
         return rtn
 
     def is_goal(self, state):

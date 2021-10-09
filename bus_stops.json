@@ -82,7 +82,7 @@
           "distance": 3
         }
       ],
-      "linedistance": 3
+      "linedistance": 5
     },
     {
       "name": "clay",
@@ -94,7 +94,7 @@
           "distance": 2
         }
       ],
-      "linedistance": 2
+      "linedistance": 4
     },
     {
       "name": "orin",
