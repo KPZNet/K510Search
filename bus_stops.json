@@ -1,94 +1,94 @@
 {
-	"busstops" : [
-		{
-			"name" : "pitt",
-			"stops" : [
-				{
-					"departuretime" : "2000-01-31 09:00",
-					"arrivaltime" : "2000-01-31 09:10",
-					"destination" : "sfo",
-					"distance" : 50
-				},
-				{
-					"departuretime" : "2000-01-31 11:00",
-					"arrivaltime" : "2000-01-31 13:55",
-					"destination" : "oia",
-					"distance" : 80
-				}
-			],
-			"distance" : 0
-		},
-		{
-			"name" : "brentwood",
-			"stops" : [
-				{
-					"departuretime" : "2000-01-31 06:00",
-					"arrivaltime" : "2000-01-31 06:10",
-					"destination" : "oak",
-					"distance" : 8
-				},
-				{
-					"departuretime" : "2000-01-31 06:00",
-					"arrivaltime" : "2000-01-31 06:05",
-					"destination" : "conc",
-					"distance" : 5
-				}
-			],
-			"distance" : 25
-		},
-		{
-			"name" : "oak",
-			"stops" : [
-				{
-					"departuretime" : "2000-01-31 06:05",
-					"arrivaltime" : "2000-01-31 06:10",
-					"destination" : "pitt",
-					"distance" : 5
-				}
-			],
-			"distance" : 7
-		},
-		{
-			"name" : "conc",
-			"stops" : [
-				{
-					"departuretime" : "2000-01-31 06:05",
-					"arrivaltime" : "2000-01-31 06:10",
-					"destination" : "ant",
-					"distance" : 5
-				},
-				{
-					"departuretime" : "2000-01-31 06:05",
-					"arrivaltime" : "2000-01-31 06:10",
-					"destination" : "clay",
-					"distance" : 5
-				}
-			],
-			"distance" : 6
-		},
-		{
-			"name" : "ant",
-			"stops" : [
-				{
-					"departuretime" : "2000-01-31 06:10",
-					"arrivaltime" : "2000-01-31 06:15",
-					"destination" : "pitt",
-					"distance" : 5
-				}
-			],
-			"distance" : 5
-		},
-		{
-			"name" : "clay",
-			"stops" : [
-				{
-					"departuretime" : "2000-01-31 06:10",
-					"arrivaltime" : "2000-01-31 06:12",
-					"destination" : "pitt",
-					"distance" : 5
-				}
-			],
-			"distance" : 3
-		}
-	]
+  "busstops": [
+    {
+      "name": "pitt",
+      "stops": [
+        {
+          "departuretime": "2000-01-31 09:00",
+          "arrivaltime": "2000-01-31 09:10",
+          "destination": "sfo",
+          "distance": 50
+        },
+        {
+          "departuretime": "2000-01-31 11:00",
+          "arrivaltime": "2000-01-31 13:55",
+          "destination": "oia",
+          "distance": 80
+        }
+      ],
+      "linedistance": 0
+    },
+    {
+      "name": "brentwood",
+      "stops": [
+        {
+          "departuretime": "2000-01-31 06:00",
+          "arrivaltime": "2000-01-31 06:10",
+          "destination": "oak",
+          "distance": 7
+        },
+        {
+          "departuretime": "2000-01-31 06:00",
+          "arrivaltime": "2000-01-31 06:05",
+          "destination": "conc",
+          "distance": 5
+        }
+      ],
+      "linedistance": 25
+    },
+    {
+      "name": "oak",
+      "stops": [
+        {
+          "departuretime": "2000-01-31 06:05",
+          "arrivaltime": "2000-01-31 06:10",
+          "destination": "pitt",
+          "distance": 5
+        }
+      ],
+      "linedistance": 7
+    },
+    {
+      "name": "conc",
+      "stops": [
+        {
+          "departuretime": "2000-01-31 06:05",
+          "arrivaltime": "2000-01-31 06:10",
+          "destination": "ant",
+          "distance": 5
+        },
+        {
+          "departuretime": "2000-01-31 06:05",
+          "arrivaltime": "2000-01-31 06:10",
+          "destination": "clay",
+          "distance": 5
+        }
+      ],
+      "linedistance": 8
+    },
+    {
+      "name": "ant",
+      "stops": [
+        {
+          "departuretime": "2000-01-31 06:10",
+          "arrivaltime": "2000-01-31 06:15",
+          "destination": "pitt",
+          "distance": 3
+        }
+      ],
+      "linedistance": 3
+    },
+    {
+      "name": "clay",
+      "stops": [
+        {
+          "departuretime": "2000-01-31 06:10",
+          "arrivaltime": "2000-01-31 06:12",
+          "destination": "pitt",
+          "distance": 2
+        }
+      ],
+      "linedistance": 2
+    }
+  ]
 }

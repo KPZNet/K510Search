@@ -36,7 +36,7 @@ class BusTrip():
 class BusStop():
     def __init__(self, busstop):
         self.name = busstop['name']
-        self.distance = busstop['distance']
+        self.linedistance = busstop['linedistance']
         self.trips = []
         for stop in busstop['stops']:
             s = BusTrip(stop)
@@ -71,6 +71,21 @@ class BusRoute( SearchProblem ):
         stp = get_destination ( state )
         return stp == GOAL
 
+    def cost(self, state1, action, state2):
+        cost = 0
+        stps = list( state2.split(","))
+        l = len(stps)
+        if l == 1:
+            bs = next(x for x in self.bs if x.name == stps[0])
+            cost = bs.linedistance
+        if l > 1:
+            source = stps[l-2]
+            dest = stps[l-1]
+            sourcenode = next(x for x in self.bs if x.name == source)
+            destnode = next(x for x in self.bs if x.name == dest)
+            source_to_dest = next(x for x in sourcenode.trips if x.destination == dest)
+            cost = source_to_dest.distance
+        return cost
 
     def heuristic(self, state):
         distance = 0
@@ -78,14 +93,14 @@ class BusRoute( SearchProblem ):
         l = len(stps)
         if l == 1:
             bs = next(x for x in self.bs if x.name == stps[0])
-            distance = bs.distance
+            distance = bs.linedistance
         if l > 1:
             source = stps[l-2]
             dest = stps[l-1]
             sourcenode = next(x for x in self.bs if x.name == source)
             destnode = next(x for x in self.bs if x.name == dest)
             source_to_dest = next(x for x in sourcenode.trips if x.destination == dest)
-            distance = source_to_dest.distance + destnode.distance
+            distance = destnode.linedistance
 
         return distance
 
