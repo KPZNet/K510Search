@@ -23,13 +23,13 @@
       "stops": [
         {
           "departuretime": "2000-01-31 06:00",
-          "arrivaltime": "2000-01-31 06:10",
+          "arrivaltime": "2000-01-31 06:17",
           "destination": "oak",
           "distance": 7
         },
         {
-          "departuretime": "2000-01-31 06:00",
-          "arrivaltime": "2000-01-31 06:05",
+          "departuretime": "2000-01-31 06:05",
+          "arrivaltime": "2000-01-31 06:16",
           "destination": "conc",
           "distance": 5
         }
@@ -40,8 +40,8 @@
       "name": "oak",
       "stops": [
         {
-          "departuretime": "2000-01-31 06:05",
-          "arrivaltime": "2000-01-31 06:10",
+          "departuretime": "2000-01-31 06:25",
+          "arrivaltime": "2000-01-31 06:33",
           "destination": "pitt",
           "distance": 5
         }
@@ -52,20 +52,20 @@
       "name": "conc",
       "stops": [
         {
-          "departuretime": "2000-01-31 06:05",
-          "arrivaltime": "2000-01-31 06:10",
+          "departuretime": "2000-01-31 06:30",
+          "arrivaltime": "2000-01-31 06:45",
           "destination": "ant",
           "distance": 5
         },
         {
-          "departuretime": "2000-01-31 06:05",
-          "arrivaltime": "2000-01-31 06:10",
+          "departuretime": "2000-01-31 06:28",
+          "arrivaltime": "2000-01-31 06:41",
           "destination": "clay",
           "distance": 5
         },
         {
-          "departuretime": "2000-01-31 06:05",
-          "arrivaltime": "2000-01-31 06:15",
+          "departuretime": "2000-01-31 06:40",
+          "arrivaltime": "2000-01-31 06:55",
           "destination": "orin",
           "distance": 2
         }
@@ -76,8 +76,8 @@
       "name": "ant",
       "stops": [
         {
-          "departuretime": "2000-01-31 06:10",
-          "arrivaltime": "2000-01-31 06:15",
+          "departuretime": "2000-01-31 07:00",
+          "arrivaltime": "2000-01-31 07:32",
           "destination": "pitt",
           "distance": 3
         }
@@ -88,8 +88,8 @@
       "name": "clay",
       "stops": [
         {
-          "departuretime": "2000-01-31 06:10",
-          "arrivaltime": "2000-01-31 06:12",
+          "departuretime": "2000-01-31 07:10",
+          "arrivaltime": "2000-01-31 07:20",
           "destination": "pitt",
           "distance": 2
         }
@@ -100,8 +100,8 @@
       "name": "orin",
       "stops": [
         {
-          "departuretime": "2000-01-31 06:10",
-          "arrivaltime": "2000-01-31 06:12",
+          "departuretime": "2000-01-31 07:10",
+          "arrivaltime": "2000-01-31 07:42",
           "destination": "pitt",
           "distance": 4
         }

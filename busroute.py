@@ -108,8 +108,8 @@ class BusRoute( SearchProblem ):
 bspts = init_bus_schedule()
 
 problem = BusRoute( busstops=bspts )
-#result = astar(problem)
-result = astar(problem, viewer=WebViewer())
+result = astar(problem)
+#result = astar(problem, viewer=WebViewer())
 
 
 print(result.state)
