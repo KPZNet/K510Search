@@ -29,9 +29,9 @@ bus_sch = {
         },
         {
           "departuretime" : "2000-01-31 06:03",
-          "arrivaltime" : "2000-01-31 06:13",
+          "arrivaltime" : "2000-01-31 07:45",
           "destination" : "plsnt",
-          "distance" : 4
+          "distance" : 20
         },
         {
           "departuretime": "2000-01-31 06:05",
@@ -46,13 +46,13 @@ bus_sch = {
       "name" : "plsnt",
       "stops" : [
         {
-          "departuretime" : "2000-01-31 06:50",
-          "arrivaltime" : "2000-01-31 06:55",
+          "departuretime" : "2000-01-31 08:50",
+          "arrivaltime" : "2000-01-31 09:55",
           "destination" : "conc",
-          "distance" : 3
+          "distance" : 20
         }
       ],
-      "linedistance" : 6
+      "linedistance" : 42
     },
     {
       "name": "oak",
