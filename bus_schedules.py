@@ -29,7 +29,7 @@ bus_sch = {
         },
         {
           "departuretime" : "2000-01-31 06:03",
-          "arrivaltime" : "2000-01-31 06:28",
+          "arrivaltime" : "2000-01-31 06:13",
           "destination" : "plsnt",
           "distance" : 4
         },
@@ -47,19 +47,19 @@ bus_sch = {
       "stops" : [
         {
           "departuretime" : "2000-01-31 06:50",
-          "arrivaltime" : "2000-01-31 07:35",
+          "arrivaltime" : "2000-01-31 06:55",
           "destination" : "conc",
           "distance" : 3
         }
       ],
-      "linedistance" : 12
+      "linedistance" : 6
     },
     {
       "name": "oak",
       "stops": [
         {
           "departuretime": "2000-01-31 06:25",
-          "arrivaltime": "2000-01-31 06:33",
+          "arrivaltime": "2000-01-31 07:33",
           "destination": "pitt",
           "distance": 5
         }
@@ -71,7 +71,7 @@ bus_sch = {
       "stops": [
         {
           "departuretime": "2000-01-31 06:30",
-          "arrivaltime": "2000-01-31 06:45",
+          "arrivaltime": "2000-01-31 07:45",
           "destination": "ant",
           "distance": 5
         },
@@ -79,7 +79,7 @@ bus_sch = {
           "departuretime": "2000-01-31 06:28",
           "arrivaltime": "2000-01-31 06:41",
           "destination": "clay",
-          "distance": 5
+          "distance": 7
         },
         {
           "departuretime": "2000-01-31 06:40",
@@ -95,7 +95,7 @@ bus_sch = {
       "stops": [
         {
           "departuretime": "2000-01-31 07:00",
-          "arrivaltime": "2000-01-31 07:32",
+          "arrivaltime": "2000-01-31 07:52",
           "destination": "pitt",
           "distance": 3
         }
@@ -112,7 +112,7 @@ bus_sch = {
           "distance": 2
         }
       ],
-      "linedistance": 4
+      "linedistance": 48
     },
     {
       "name": "orin",
@@ -124,7 +124,7 @@ bus_sch = {
           "distance": 4
         }
       ],
-      "linedistance": 1
+      "linedistance": 4
     }
   ]
 }
